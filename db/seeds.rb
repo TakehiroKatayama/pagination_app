@@ -5,3 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+require "faker"
+Faker::Config.locale = :ja
+
+50.times do
+  Post.create!(body: Faker::Games::Pokemon.name)
+end
